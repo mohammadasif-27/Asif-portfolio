@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammad Asif | Aspiring Full-Stack Web Developer</title>
     <meta name="description" content="Portfolio of Mohammad Asif, a BCA student from Sandur, Karnataka building web apps with React, Python and Django." />
-    <meta name="theme-color" content="#080b14" />
+    <meta name="theme-color" content="#050816" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Mohammad Asif | Aspiring Full-Stack Web Developer" />
@@ -15,10 +15,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      html, body, #root { min-height: 100%; margin: 0; background: #050816; }
+      html[data-theme="light"], html[data-theme="light"] body, html[data-theme="light"] #root { background: #F8FAFF; }
+    </style>
     <script>
-      const savedTheme = localStorage.getItem('portfolio-theme')
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-      document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : preferredTheme
+      (() => {
+        let theme = 'dark'
+        try {
+          const savedTheme = localStorage.getItem('portfolio-theme-v2')
+          if (savedTheme === 'light' || savedTheme === 'dark') theme = savedTheme
+        } catch (error) {
+          console.warn('Theme preference could not be read before page render.', error)
+        }
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#050816' : '#F8FAFF'
+      })()
     </script>
   </head>
   <body>

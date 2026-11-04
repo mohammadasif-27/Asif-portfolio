@@ -55,9 +55,9 @@ Replace `public/resume.pdf` with your new file, keeping the same name.
 The contact form submits directly through EmailJS and displays a sending state followed by a success or error message. Its EmailJS service, template, and public key are configured in `src/components/Contact.jsx`. Keep private credentials out of client-side code; EmailJS's browser public key is intended for use in a frontend application. You can also edit your displayed contact details in `src/data.js`.
 
 ## Theme
-The theme toggle in the navigation saves the selected theme in `localStorage`. On a first visit, the site follows the visitor's system color-scheme preference.
+The theme toggle in the navigation saves the selected theme in the versioned `portfolio-theme-v2` localStorage key. The first visit defaults to dark mode regardless of the operating system theme. In light mode the Galaxy component is unmounted, leaving a static light background; in dark mode it is mounted as the animated page background.
 
 ## Galaxy background
-The fixed, interactive background uses the official React Bits Galaxy JavaScript/CSS source in `src/components/Galaxy.jsx` and `Galaxy.css`. Its colors, motion, density, and theme-specific opacity are configured where it is rendered in `src/App.jsx`. The light theme enables Galaxy's `lightMode`; compact screens use a lower render pixel ratio. The component respects reduced-motion preferences and pauses when it is off-screen or the browser tab is hidden.
+The fixed, interactive dark-mode background uses the official React Bits Galaxy JavaScript/CSS source in `src/components/Galaxy.jsx` and `Galaxy.css`. Its colors, motion, and density are configured in `src/components/GalaxyBackground.jsx`; compact screens use a lower render pixel ratio. The component respects reduced-motion preferences and pauses when it is off-screen or the browser tab is hidden. Light mode unmounts Galaxy entirely, leaving a static background.
 
 The source can be customized directly. React Bits' registry command is `npx shadcn@latest add @react-bits/Galaxy-JS-CSS`; adding through the CLI requires a `components.json` configuration.

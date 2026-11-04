@@ -19,13 +19,13 @@ export default function Navbar({ theme, onThemeChange }) {
           ))}
           <a className="btn btn-small nav-resume" href={profile.resume} download="Mohammad-Asif-Resume.pdf"><Download width={16} height={16} /> Download Resume</a>
           <button className="theme-toggle" type="button" onClick={onThemeChange} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
-            {theme === 'dark' ? <Sun /> : <Moon />}
+            {theme === 'dark' ? <Moon /> : <Sun />}
             <span>{theme === 'dark' ? 'Light' : 'Dark'} mode</span>
           </button>
         </nav>
         <div className="nav-controls">
           <button className="theme-toggle nav-theme-toggle" type="button" onClick={onThemeChange} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
-            {theme === 'dark' ? <Sun /> : <Moon />}
+            {theme === 'dark' ? <Moon /> : <Sun />}
           </button>
           <button className="burger" type="button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="menu" onClick={() => setOpen(!open)}>
           {open ? <Close /> : <Menu />}
