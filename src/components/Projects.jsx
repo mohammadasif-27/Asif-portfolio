@@ -10,7 +10,7 @@ export default function Projects() {
       <div className="grid-2">
         {projects.map((p) => (
           <article className="card glass project" key={p.name}>
-            <Preview type={p.preview} />
+            <Preview type={p.preview} title={p.name} />
             <h3>{p.name}</h3>
             <p className="sub">{p.subtitle}</p>
             <p>{p.description}</p>

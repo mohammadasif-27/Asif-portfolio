@@ -1,6 +1,6 @@
-# Mohammad Asif – Portfolio Website
+# Mohammad Asif — Portfolio Website
 
-Built with React and Vite. Dark theme, responsive, no backend needed.
+Built with React and Vite. Responsive portfolio with a persistent dark/light theme and an EmailJS-powered contact form.
 
 ## 1. Extract the ZIP
 Right-click `asif-portfolio.zip` and choose **Extract All** (Windows) or double-click it (Mac). You will get a folder named `asif-portfolio`.
@@ -52,4 +52,12 @@ Replace `public/resume.pdf` with your new file, keeping the same name.
 - **GitHub Pages:** upload the contents of `dist` to a repository and enable Pages in its settings.
 
 ## About the contact form
-There is no server. When a visitor presses **Send Message**, their own email app opens with your address, the subject and the message filled in. The message is only sent once they press Send in that app. It will not work for visitors who have no email app set up; the page also shows your email address for them. For direct delivery without an email app, use a free form service such as Formspree or Web3Forms.
+The contact form submits directly through EmailJS and displays a sending state followed by a success or error message. Its EmailJS service, template, and public key are configured in `src/components/Contact.jsx`. Keep private credentials out of client-side code; EmailJS's browser public key is intended for use in a frontend application. You can also edit your displayed contact details in `src/data.js`.
+
+## Theme
+The theme toggle in the navigation saves the selected theme in `localStorage`. On a first visit, the site follows the visitor's system color-scheme preference.
+
+## Galaxy background
+The fixed, interactive background uses the official React Bits Galaxy JavaScript/CSS source in `src/components/Galaxy.jsx` and `Galaxy.css`. Its colors, motion, density, and theme-specific opacity are configured where it is rendered in `src/App.jsx`. The light theme enables Galaxy's `lightMode`; compact screens use a lower render pixel ratio. The component respects reduced-motion preferences and pauses when it is off-screen or the browser tab is hidden.
+
+The source can be customized directly. React Bits' registry command is `npx shadcn@latest add @react-bits/Galaxy-JS-CSS`; adding through the CLI requires a `components.json` configuration.

@@ -19,3 +19,5 @@ export const Server = make(<><rect x="2" y="3" width="20" height="8" rx="2" /><r
 export const Wrench = make(<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z" />)
 export const Sparkles = make(<><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" /><path d="M19 17v4M17 19h4" /></>)
 export const GradCap = make(<><path d="m22 10-10-5L2 10l10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></>)
+export const Sun = make(<><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></>)
+export const Moon = make(<path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" />)

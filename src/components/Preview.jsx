@@ -1,11 +1,11 @@
 import React from 'react'
 
 // Original illustrated previews. They are NOT screenshots of the real projects.
-export default function Preview({ type }) {
+export default function Preview({ type, title }) {
   const c = { cafe: ['#3b82f6', '#8b5cf6'], service: ['#8b5cf6', '#06b6d4'], shop: ['#06b6d4', '#3b82f6'], game: ['#8b5cf6', '#3b82f6'] }[type] || ['#3b82f6', '#8b5cf6']
   const id = `g-${type}`
   return (
-    <svg viewBox="0 0 320 170" role="img" aria-label="Illustrated preview, not a real screenshot" className="preview">
+    <svg viewBox="0 0 320 170" role="img" aria-label={`${title} project illustration, not a real screenshot`} className="preview">
       <defs><linearGradient id={id} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={c[0]} /><stop offset="1" stopColor={c[1]} /></linearGradient></defs>
       <rect width="320" height="170" fill="#0d1330" />
       <rect x="16" y="14" width="288" height="14" rx="7" fill="#1a2250" />

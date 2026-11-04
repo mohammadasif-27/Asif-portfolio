@@ -7,9 +7,9 @@ export default function Hero() {
     <section id="home" className="hero" aria-label="Introduction">
       <div className="container hero-grid">
         <div className="hero-copy">
-          <p className="hello">Hello, I'm</p>
+          <p className="hello"><span className="hello-mark" /> Hello, I’m</p>
           <h1>{profile.name}</h1>
-          <p className="roles">Aspiring Web Developer | React Developer | Python Developer</p>
+          <p className="roles">Aspiring Full-Stack Developer</p>
           <p className="lead">
             I'm a BCA student who enjoys building responsive web applications. I work with React on the front end and Python with Django on the back end, and I'm looking for an entry-level software or web development role.
           </p>
