@@ -11,7 +11,7 @@ export default function Hero() {
           <h1>{profile.name}</h1>
           <p className="roles">Aspiring Full-Stack Developer</p>
           <p className="lead">
-            I'm a BCA student who enjoys building responsive web applications. I work with React on the front end and Python with Django on the back end, and I'm looking for an entry-level software or web development role.
+            I'm a BCA graduate who enjoys building responsive web applications. I work with React on the front end and Python with Django on the back end, and I'm looking for an entry-level software or web development role.
           </p>
           <div className="actions">
             <a className="btn" href="#projects">View My Projects</a>
