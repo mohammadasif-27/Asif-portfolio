@@ -8,7 +8,7 @@ export default function About() {
     <Section id="about" title="About me">
       <div className="about-grid">
         <div className="prose">
-          <p>I am a Bachelor of Computer Applications student at Shri Maata Degree College, finishing my degree in 2026. I enjoy turning ideas into web applications that are simple to use and work well on any screen.</p>
+          <p>I am a Bachelor of Computer Applications graduate at Shri Maata Degree College, having completed my degree in 2026. I enjoy turning ideas into web applications that are simple to use and work well on any screen.</p>
           <p>My learning started with HTML, CSS and JavaScript. I then moved on to Python and Django for back-end development, PostgreSQL and MySQL for databases, and React for modern interfaces. I use Git and GitHub to manage my work, and AI tools such as GitHub Copilot, ChatGPT and Cursor to learn faster and build more.</p>
           <p>My goal is to start my career as a software or web developer, learn from an experienced team, and keep building useful, user-friendly applications.</p>
         </div>
